@@ -1,0 +1,26 @@
+{
+  "name": "it2031-lab02-sorochynska",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+     "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarianaSorochynskas/it2031-lab02-sorochynska.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MarianaSorochynskas/it2031-lab02-sorochynska/issues"
+  },
+  "homepage": "https://github.com/MarianaSorochynskas/it2031-lab02-sorochynska#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
