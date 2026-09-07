@@ -5,6 +5,15 @@ const server = http.createServer((request, response) => {
 
     const url = new URL(request.url, 'http://localhost:3000'); // Create a URL object to break down the request URL
 
+    function escapeHtmlName(value) {
+    return value
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+}
+
     if (request.url === '/') {
         response.writeHead(200, { 'Content-Type': 'text/html' });
 
@@ -65,7 +74,7 @@ const server = http.createServer((request, response) => {
         response.write(`
             <html>
                 <body>
-                    <h1>Hello, ${name}!</h1>
+                    <h1>Hello, ${escapeHtmlName(name)}!</h1>
                 </body>
             </html>
         `);
