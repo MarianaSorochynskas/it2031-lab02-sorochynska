@@ -73,6 +73,19 @@ const server = http.createServer((request, response) => {
         response.end();
     }
    
+    else {
+    response.writeHead(404, { 'Content-Type': 'text/html' });
+
+    response.write(`
+        <html>
+            <body>
+                <h1 style="color: red;">404 - Page Not Found</h1>
+            </body>
+        </html>
+    `);
+
+    response.end();
+}
     
 });
 
